@@ -1,6 +1,6 @@
 # Infographics Portal
 
-A web portal for College of Southern Nevada (CSN) students to access and download study infographics organized by course. Static site built with plain HTML, CSS, and JavaScript — no frameworks or external dependencies — designed to be deployed on GitHub Pages, Vercel, or any static hosting provider.
+A web portal for students to access and download study infographics organized by course. Static site built with plain HTML, CSS, and JavaScript — no frameworks or external dependencies — designed to be deployed on GitHub Pages, Vercel, or any static hosting provider.
 
 🔗 **Live demo:** https://gleimbek.github.io/infographics/
 
@@ -46,10 +46,10 @@ To publish a new unit:
 Access codes are defined directly in `index.html`, in the `onclick` attribute of each card's "Unlock" button:
 
 ```html
-<button onclick="unlockCourse('cit151', 'web151')">Unlock</button>
+<button onclick="unlockCourse('cit151', '******')">Unlock</button>
 ```
 
-The second parameter (`'web151'`) is the correct code for that course. Simply change that value to update the access code.
+The second parameter (`'******'`) is the correct code for that course. Simply change that value to update the access code.
 
 ## Local development
 
