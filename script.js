@@ -1,8 +1,12 @@
 // Units A through P definition for CIT 151
 const cit151Units = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P'];
 
+// Infographic numbers 01 through 09 for CIT 144
+const cit144Units = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
+
 document.addEventListener('DOMContentLoaded', () => {
   renderCIT151Units();
+  renderCIT144Units();
 });
 
 function renderCIT151Units() {
@@ -84,6 +88,30 @@ async function downloadImage(filepath, filename) {
     window.open(filepath, '_blank', 'noopener');
     alert('No se pudo descargar automáticamente. Esto suele pasar cuando la página se abre directamente desde el archivo (file://) en vez de un servidor local. La imagen se abrió en una pestaña nueva; puedes hacer clic derecho > "Guardar imagen como".');
   }
+}
+
+function renderCIT144Units() {
+  const container = document.getElementById('list-cit144');
+  if (!container) return;
+
+  container.innerHTML = cit144Units.map(num => {
+    const filename = `infographic-${num}.png`;
+    const filepath = `image/${filename}`;
+    const title = `Infographic ${num}`;
+
+    return `
+      <div class="thumb-card">
+        <img src="${filepath}" alt="${title}" class="thumb-img"
+             onerror="this.src='https://via.placeholder.com/240x140?text=Infographic+${num}'"
+             onclick="openImageModal('${filepath}', '${title}', '${filename}')">
+        <span class="thumb-title">${title}</span>
+        <div class="thumb-actions">
+          <button class="btn-view" onclick="openImageModal('${filepath}', '${title}', '${filename}')">View</button>
+          <button class="btn-download" onclick="downloadImage('${filepath}', '${filename}')">Download</button>
+        </div>
+      </div>
+    `;
+  }).join('');
 }
 
 function unlockCourse(courseId, correctKey) {
