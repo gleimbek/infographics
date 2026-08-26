@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Resource Hub | CSN Infographics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="badge">CSN</span> Infographics Portal
+      </div>
+      <button id="btn-reset" class="btn-reset hidden" onclick="resetView()">← View All Courses</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero-section">
+      <h1>Visual Learning & Study Guides</h1>
+      <p>Access exclusive infographics for your courses. Enter your student access code below to unlock interactive visual guides and direct downloads.</p>
+    </section>
+
+    <div class="cards-grid" id="courses-grid">
+      
+      <!-- CIT 151 Card -->
+      <article class="card" id="card-cit151">
+        <div class="card-header">
+          <span class="course-code">CIT 151</span>
+          <h2>Beginning Web Development</h2>
+        </div>
+        <p class="card-desc">Fundamentals of HTML5, CSS3, page layout design, and core web architecture.</p>
+        
+        <div class="auth-box" id="box-cit151">
+          <div class="input-group">
+            <input type="password" id="key-cit151" placeholder="Enter access code..." aria-label="Access code for CIT 151">
+            <button onclick="unlockCourse('cit151', 'web151')">Unlock</button>
+          </div>
+        </div>
+
+        <div class="resources-box hidden" id="resources-cit151">
+          <h3>Available Infographics (Units A - P)</h3>
+          <div class="thumbnails-grid" id="list-cit151">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+      </article>
+
+      <!-- CIT 144 Card -->
+      <article class="card" id="card-cit144">
+        <div class="card-header">
+          <span class="course-code">CIT 144</span>
+          <h2>Introduction to Data Analytics</h2>
+        </div>
+        <p class="card-desc">Core concepts in data analytics, visualization methods, structures, and decision-making.</p>
+        
+        <div class="auth-box" id="box-cit144">
+          <div class="input-group">
+            <input type="password" id="key-cit144" placeholder="Enter access code..." aria-label="Access code for CIT 144">
+            <button onclick="unlockCourse('cit144', 'data144')">Unlock</button>
+          </div>
+        </div>
+
+        <div class="resources-box hidden" id="resources-cit144">
+          <h3>Available Infographics</h3>
+          <p class="empty-msg">No units currently published.</p>
+        </div>
+      </article>
+
+      <!-- CIT 251 Card -->
+      <article class="card" id="card-cit251">
+        <div class="card-header">
+          <span class="course-code">CIT 251</span>
+          <h2>Advanced Web Development</h2>
+        </div>
+        <p class="card-desc">Advanced techniques, object-oriented JavaScript, component patterns, and modern frameworks.</p>
+        
+        <div class="auth-box" id="box-cit251">
+          <div class="input-group">
+            <input type="password" id="key-cit251" placeholder="Enter access code..." aria-label="Access code for CIT 251">
+            <button onclick="unlockCourse('cit251', 'web251')">Unlock</button>
+          </div>
+        </div>
+
+        <div class="resources-box hidden" id="resources-cit251">
+          <h3>Available Infographics</h3>
+          <p class="empty-msg">No units currently published.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Image Preview Modal -->
+  <div class="modal-overlay hidden" id="image-modal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeImageModal()" aria-label="Close preview">&times;</button>
+      <img src="" alt="" id="modal-img">
+      <div class="modal-footer">
+        <span id="modal-title"></span>
+        <button class="btn-download" id="modal-download-btn">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
