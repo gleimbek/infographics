@@ -129,6 +129,19 @@ function resetView() {
     card.classList.remove('hidden');
   });
 
+  // Re-lock every course: hide resources, show the access code input again,
+  // and clear whatever was typed so no unlocked content stays visible.
+  const courseIds = ['cit151', 'cit144', 'cit251'];
+  courseIds.forEach(courseId => {
+    const box = document.getElementById(`box-${courseId}`);
+    const resources = document.getElementById(`resources-${courseId}`);
+    const input = document.getElementById(`key-${courseId}`);
+
+    if (box) box.classList.remove('hidden');
+    if (resources) resources.classList.add('hidden');
+    if (input) input.value = '';
+  });
+
   // Revert grid layout
   const grid = document.getElementById('courses-grid');
   grid.classList.remove('single-view');
