@@ -29,7 +29,7 @@ body {
 }
 
 .header {
-  background-color: #FFFFFF;
+  background: linear-gradient(120deg, #E8F0FE 0%, #FFFFFF 30%, #FFF4E0 65%, #E6FBF6 100%);
   color: var(--csn-blue);
   padding: 0.85rem 0;
   border-bottom: 4px solid var(--csn-gold);
@@ -50,7 +50,7 @@ body {
 }
 
 .logo-img {
-  height: 48px;
+  height: 80px;
   display: block;
 }
 
@@ -204,6 +204,7 @@ body {
   border-radius: 6px;
   font-size: 0.95rem;
   outline: none;
+  -webkit-text-security: disc;
 }
 
 .input-error input {
