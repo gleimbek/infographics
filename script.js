@@ -1,27 +1,57 @@
-// Units A through P definition for CIT 151
-const cit151Units = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P'];
+// Each entry is one infographic image. A chapter/unit can appear more than
+// once here if it has multiple infographics — just add another object with
+// the same "unit" prefix but a different filename/title.
+const cit151Units = [
+  { title: 'Unit A - HTML', filename: 'Unit A - HTML.png' },
+  { title: 'Unit B - HTML', filename: 'Unit B - HTML.png' },
+  { title: 'Unit C - HTML', filename: 'Unit C - HTML.png' },
+  { title: 'Unit D - HTML', filename: 'Unit D - HTML.png' },
+  { title: 'Unit E - HTML', filename: 'Unit E - HTML.png' },
+  { title: 'Unit F - HTML', filename: 'Unit F - HTML.png' },
+  { title: 'Unit G - HTML', filename: 'Unit G - HTML.png' },
+  { title: 'Unit H - HTML', filename: 'Unit H - HTML.png' },
+  { title: 'Unit I - HTML', filename: 'Unit I - HTML.png' },
+  { title: 'Unit J - HTML', filename: 'Unit J - HTML.png' },
+  { title: 'Unit K - HTML', filename: 'Unit K - HTML.png' },
+  { title: 'Unit L - HTML', filename: 'Unit L - HTML.png' },
+  { title: 'Unit M - HTML', filename: 'Unit M - HTML.png' },
+  { title: 'Unit N - HTML', filename: 'Unit N - HTML.png' },
+  { title: 'Unit O - HTML', filename: 'Unit O - HTML.png' },
+  { title: 'Unit P - HTML', filename: 'Unit P - HTML.png' },
+  // Example: a SECOND infographic for Unit A — just uncomment and rename
+  // the file to add it:
+  // { title: 'Unit A - HTML (Part 2)', filename: 'Unit A - HTML Part 2.png' },
+];
 
-// Infographic numbers 01 through 09 for CIT 144
-const cit144Units = ['01', '02', '03', '04', '05', '06', '07', '08', '09'];
+const cit144Units = [
+  { title: 'Infographic 01', filename: 'infographic-01.png' },
+  { title: 'Infographic 02', filename: 'infographic-02.png' },
+  { title: 'Infographic 03', filename: 'infographic-03.png' },
+  { title: 'Infographic 04', filename: 'infographic-04.png' },
+  { title: 'Infographic 05', filename: 'infographic-05.png' },
+  { title: 'Infographic 06', filename: 'infographic-06.png' },
+  { title: 'Infographic 07', filename: 'infographic-07.png' },
+  { title: 'Infographic 08', filename: 'infographic-08.png' },
+  { title: 'Infographic 09', filename: 'infographic-09.png' },
+];
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderCIT151Units();
-  renderCIT144Units();
+  renderThumbnails('list-cit151', cit151Units);
+  renderThumbnails('list-cit144', cit144Units);
 });
 
-function renderCIT151Units() {
-  const container = document.getElementById('list-cit151');
+// Generic renderer: works for any course, any number of infographics per chapter.
+function renderThumbnails(containerId, items) {
+  const container = document.getElementById(containerId);
   if (!container) return;
 
-  container.innerHTML = cit151Units.map(unit => {
-    const filename = `Unit ${unit} - HTML.png`;
+  container.innerHTML = items.map(({ title, filename }) => {
     const filepath = `image/${filename}`;
-    const title = `Unit ${unit} - HTML`;
 
     return `
       <div class="thumb-card">
-        <img src="${filepath}" alt="${title} Infographic" class="thumb-img"
-             onerror="this.src='https://via.placeholder.com/240x140?text=Unit+${unit}+Preview'"
+        <img src="${filepath}" alt="${title}" class="thumb-img"
+             onerror="this.src='https://via.placeholder.com/240x140?text=Preview'"
              onclick="openImageModal('${filepath}', '${title}', '${filename}')">
         <span class="thumb-title">${title}</span>
         <div class="thumb-actions">
@@ -88,30 +118,6 @@ async function downloadImage(filepath, filename) {
     window.open(filepath, '_blank', 'noopener');
     alert('No se pudo descargar automáticamente. Esto suele pasar cuando la página se abre directamente desde el archivo (file://) en vez de un servidor local. La imagen se abrió en una pestaña nueva; puedes hacer clic derecho > "Guardar imagen como".');
   }
-}
-
-function renderCIT144Units() {
-  const container = document.getElementById('list-cit144');
-  if (!container) return;
-
-  container.innerHTML = cit144Units.map(num => {
-    const filename = `infographic-${num}.png`;
-    const filepath = `image/${filename}`;
-    const title = `Infographic ${num}`;
-
-    return `
-      <div class="thumb-card">
-        <img src="${filepath}" alt="${title}" class="thumb-img"
-             onerror="this.src='https://via.placeholder.com/240x140?text=Infographic+${num}'"
-             onclick="openImageModal('${filepath}', '${title}', '${filename}')">
-        <span class="thumb-title">${title}</span>
-        <div class="thumb-actions">
-          <button class="btn-view" onclick="openImageModal('${filepath}', '${title}', '${filename}')">View</button>
-          <button class="btn-download" onclick="downloadImage('${filepath}', '${filename}')">Download</button>
-        </div>
-      </div>
-    `;
-  }).join('');
 }
 
 function unlockCourse(courseId, correctKey) {
