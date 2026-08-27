@@ -29,9 +29,9 @@ body {
 }
 
 .header {
-  background-color: var(--csn-blue);
-  color: #fff;
-  padding: 1.25rem 0;
+  background-color: #FFFFFF;
+  color: var(--csn-blue);
+  padding: 0.85rem 0;
   border-bottom: 4px solid var(--csn-gold);
 }
 
@@ -44,17 +44,20 @@ body {
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
+.logo-img {
+  height: 48px;
+  display: block;
+}
+
 .btn-reset {
   background-color: transparent;
-  color: #fff;
-  border: 1px solid var(--csn-gold);
+  color: var(--csn-blue);
+  border: 1px solid var(--csn-blue);
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   font-weight: 600;
@@ -65,8 +68,8 @@ body {
 }
 
 .btn-reset:hover {
-  background-color: var(--csn-gold);
-  color: var(--csn-dark-blue);
+  background-color: var(--csn-blue);
+  color: #fff;
 }
 
 .badge {
@@ -80,17 +83,20 @@ body {
 
 .hero {
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0 3rem 0;
+  padding: 3rem 1.5rem;
+  background-color: var(--csn-dark-blue);
+  border-radius: 12px;
 }
 
 .hero h1 {
   font-size: 2.25rem;
-  color: var(--csn-blue);
+  color: #FFFFFF;
   margin-bottom: 0.75rem;
 }
 
 .hero p {
-  color: var(--text-muted);
+  color: #CBD5E1;
   max-width: 650px;
   margin: 0 auto;
   font-size: 1.1rem;
@@ -127,14 +133,29 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
+/* CIT 151: orange -> white -> light green -> dark green */
+#card-cit151 {
+  background: linear-gradient(135deg, #FF8C00 0%, #FFFFFF 40%, #90EE90 70%, #0B6623 100%);
+}
+
+/* CIT 144: orange -> white -> light gray -> black */
+#card-cit144 {
+  background: linear-gradient(135deg, #FF8C00 0%, #FFFFFF 40%, #D3D3D3 70%, #111111 100%);
+}
+
+/* CIT 251: blue -> white -> light red -> burgundy */
+#card-cit251 {
+  background: linear-gradient(135deg, #1D4ED8 0%, #FFFFFF 40%, #FF7F7F 70%, #6E0F26 100%);
+}
+
 .card-header {
   margin-bottom: 1rem;
 }
 
 .course-code {
   display: inline-block;
-  background-color: #E2E8F0;
-  color: var(--csn-blue);
+  background-color: #B8860B;
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 0.85rem;
   padding: 0.2rem 0.5rem;
