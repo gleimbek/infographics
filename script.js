@@ -2,37 +2,37 @@
 // once here if it has multiple infographics — just add another object with
 // the same "unit" prefix but a different filename/title.
 const cit151Units = [
-  { title: 'Unit A - HTML', filename: 'Unit A - HTML.png' },
-  { title: 'Unit B - HTML', filename: 'Unit B - HTML.png' },
-  { title: 'Unit C - HTML', filename: 'Unit C - HTML.png' },
-  { title: 'Unit D - HTML', filename: 'Unit D - HTML.png' },
-  { title: 'Unit E - HTML', filename: 'Unit E - HTML.png' },
-  { title: 'Unit F - HTML', filename: 'Unit F - HTML.png' },
-  { title: 'Unit G - HTML', filename: 'Unit G - HTML.png' },
-  { title: 'Unit H - HTML', filename: 'Unit H - HTML.png' },
-  { title: 'Unit I - HTML', filename: 'Unit I - HTML.png' },
-  { title: 'Unit J - HTML', filename: 'Unit J - HTML.png' },
-  { title: 'Unit K - HTML', filename: 'Unit K - HTML.png' },
-  { title: 'Unit L - HTML', filename: 'Unit L - HTML.png' },
-  { title: 'Unit M - HTML', filename: 'Unit M - HTML.png' },
-  { title: 'Unit N - HTML', filename: 'Unit N - HTML.png' },
-  { title: 'Unit O - HTML', filename: 'Unit O - HTML.png' },
-  { title: 'Unit P - HTML', filename: 'Unit P - HTML.png' },
+  { title: 'Unit A - Getting Started with HTML', filename: 'Unit A - HTML.png' },
+  { title: 'Unit B - Structuring Content in a Web Document', filename: 'Unit B - HTML.png' },
+  { title: 'Unit C - Getting Started with CSS', filename: 'Unit C - HTML.png' },
+  { title: 'Unit D - Laying Out Elements With CSS', filename: 'Unit D - HTML.png' },
+  { title: 'Unit E - Formatting Text with CSS', filename: 'Unit E - HTML.png' },
+  { title: 'Unit F - Inserting and Working with Links', filename: 'Unit F - HTML.png' },
+  { title: 'Unit G - Inserting and Working with Images', filename: 'Unit G - HTML.png' },
+  { title: 'Unit H - Organizing Content with Lists and Tables', filename: 'Unit H - HTML.png' },
+  { title: 'Unit I - Implementing Responsive Design', filename: 'Unit I - HTML.png' },
+  { title: 'Unit J - Creating and Processing Web Forms', filename: 'Unit J - HTML.png' },
+  { title: 'Unit K - Creating Visual Effects and Animation', filename: 'Unit K - HTML.png' },
+  { title: 'Unit L - Incorporating Video and Audio', filename: 'Unit L - HTML.png' },
+  { title: 'Unit M - Programming Web Pages with JavaScript', filename: 'Unit M - HTML.png' },
+  { title: 'Unit N - Integrating Social Media', filename: 'Unit N - HTML.png' },
+  { title: 'Unit O - Optimizing Your Website for Search Engines', filename: 'Unit O - HTML.png' },
+  { title: 'Unit P - Testing and Improving Performance', filename: 'Unit P - HTML.png' },
   // Example: a SECOND infographic for Unit A — just uncomment and rename
   // the file to add it:
   // { title: 'Unit A - HTML (Part 2)', filename: 'Unit A - HTML Part 2.png' },
 ];
 
 const cit144Units = [
-  { title: 'Infographic 01', filename: 'infographic-01.png' },
-  { title: 'Infographic 02', filename: 'infographic-02.png' },
-  { title: 'Infographic 03', filename: 'infographic-03.png' },
-  { title: 'Infographic 04', filename: 'infographic-04.png' },
-  { title: 'Infographic 05', filename: 'infographic-05.png' },
-  { title: 'Infographic 06', filename: 'infographic-06.png' },
-  { title: 'Infographic 07', filename: 'infographic-07.png' },
-  { title: 'Infographic 08', filename: 'infographic-08.png' },
-  { title: 'Infographic 09', filename: 'infographic-09.png' },
+  { title: 'Chapter 1 - What is Data Analytics?', filename: 'infographic-01.png' },
+  { title: 'Chapter 2 - Getting Started with KNIME', filename: 'infographic-02.png' },
+  { title: 'Chapter 3 - Transforming Data', filename: 'infographic-03.png' },
+  { title: 'Chapter 4 - What is Machine Learning?', filename: 'infographic-04.png' },
+  { title: 'Chapter 5 - Applying Machine Learning at Work', filename: 'infographic-05.png' },
+  { title: 'Chapter 6 - Getting Started with Power BI', filename: 'infographic-06.png' },
+  { title: 'Chapter 7 - Visualizing Data Effectively', filename: 'infographic-07.png' },
+  { title: 'Chapter 8 - Telling Stories with Data', filename: 'infographic-08.png' },
+  { title: 'Chapter 9 - Extending Your Toolbox', filename: 'infographic-09.png' },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
