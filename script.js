@@ -30,7 +30,8 @@ const cit144Units = [
   { title: 'Chapter 4 - What is Machine Learning?', filename: 'infographic-04.png' },
   { title: 'Chapter 5 - Applying Machine Learning at Work', filename: 'infographic-05.png' },
   { title: 'Chapter 6 - Getting Started with Power BI', filename: 'infographic-06.png' },
-  { title: 'Chapter 7 - Visualizing Data Effectively', filename: 'infographic-07.png' },
+  { title: 'Chapter 6 - Power BI: Visualizing and Sharing Insights', filename: 'infographic-06-a.png' },
+  { title: 'Chapter 7 - Build Your First Chatbot', filename: 'infographic-07.png' },
   { title: 'Chapter 8 - Telling Stories with Data', filename: 'infographic-08.png' },
   { title: 'Chapter 9 - Extending Your Toolbox', filename: 'infographic-09.png' },
 ];
