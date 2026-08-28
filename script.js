@@ -36,9 +36,27 @@ const cit144Units = [
   { title: 'Chapter 9 - Extending Your Toolbox', filename: 'infographic-09.png' },
 ];
 
+const cit251Units = [
+  { title: 'Chapter 1 - Introduction to the Internet and Web Design', filename: 'Responsive-01.png' },
+  { title: 'Chapter 2 - Building a Webpage Template with HTML 5', filename: 'Responsive-02.png' },
+  { title: 'Chapter 3 - Enhancing a Website with Images and Links', filename: 'Responsive-03.png' },
+  { title: 'Chapter 4 - Designing Webpages with CSS', filename: 'Responsive-04.png' },
+  { title: 'Chapter 5 - Responsive Design Part 1: Designing for Mobile Devices', filename: 'Responsive-05.png' },
+  { title: 'Chapter 6 - Responsive Design Part 2: Designing for Tablet and Desktop Devices', filename: 'Responsive-06.png' },
+  { title: 'Chapter 7 - Improving Web Design with New Page Layouts', filename: 'Responsive-07.png' },
+  { title: 'Chapter 8 - Creating Tables and Forms', filename: 'Responsive-08.png' },
+  { title: 'Chapter 9 - Integrating Audio and Video', filename: 'Responsive-09.png' },
+  { title: 'Chapter 10 - Creating Interactivity with CSS and JavaScript', filename: 'Responsive-10.png' },
+  { title: 'Chapter 11 - Publish, Promote, and Maintain a Website', filename: 'Responsive-11.png' },
+  { title: 'Chapter 12 - Getting Started with Bootstrap', filename: 'Responsive-12.png' },
+];
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   renderThumbnails('list-cit151', cit151Units);
   renderThumbnails('list-cit144', cit144Units);
+  renderThumbnails('list-cit144', cit251Units);
 });
 
 // Generic renderer: works for any course, any number of infographics per chapter.
@@ -117,7 +135,7 @@ async function downloadImage(filepath, filename) {
     // Safe fallback: open the image in a new tab instead of navigating away
     // from the current page. Right-click > "Save image as" still works here.
     window.open(filepath, '_blank', 'noopener');
-    alert('No se pudo descargar automáticamente. Esto suele pasar cuando la página se abre directamente desde el archivo (file://) en vez de un servidor local. La imagen se abrió en una pestaña nueva; puedes hacer clic derecho > "Guardar imagen como".');
+    alert('Automatic download failed. This often happens when the page is opened directly from the file (file://) instead of a local server. The image opened in a new tab; you can right-click and select "Save image as...".');
   }
 }
 
