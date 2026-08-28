@@ -56,7 +56,7 @@ const cit251Units = [
 document.addEventListener('DOMContentLoaded', () => {
   renderThumbnails('list-cit151', cit151Units);
   renderThumbnails('list-cit144', cit144Units);
-  renderThumbnails('list-cit144', cit251Units);
+  renderThumbnails('list-cit251', cit251Units);
 });
 
 // Generic renderer: works for any course, any number of infographics per chapter.
