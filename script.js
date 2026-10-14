@@ -19,6 +19,7 @@ const cit151Units = [
   { title: 'Unit O - Optimizing Your Website for Search Engines', filename: 'Unit O - HTML.png' },
   { title: 'Unit P - Testing and Improving Performance', filename: 'Unit P - HTML.png' },
   { title: 'Indentation in the Structure of an HTML File', filename: 'indentation.png' },
+  { title: 'HTML Structure', filename: 'HTML Structure.jpg' },
   // Example: a SECOND infographic for Unit A — just uncomment and rename
   // the file to add it:
   // { title: 'Unit A - HTML (Part 2)', filename: 'Unit A - HTML Part 2.png' },
