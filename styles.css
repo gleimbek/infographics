@@ -1,7 +1,7 @@
 :root {
-  --csn-blue: #002D62;      /* CSN Navy Blue */
-  --csn-gold: #FFC72C;      /* CSN Gold/Yellow */
-  --csn-dark-blue: #001A3B;
+  --brand-blue: #002D62;
+  --brand-gold: #FFC72C;
+  --brand-dark-blue: #001A3B;
   --bg-color: #F4F6F9;
   --card-bg: #FFFFFF;
   --text-main: #1E293B;
@@ -30,9 +30,9 @@ body {
 
 .header {
   background: linear-gradient(120deg, #E8F0FE 0%, #FFFFFF 30%, #FFF4E0 65%, #E6FBF6 100%);
-  color: var(--csn-blue);
+  color: var(--brand-blue);
   padding: 0.85rem 0;
-  border-bottom: 4px solid var(--csn-gold);
+  border-bottom: 4px solid var(--brand-gold);
 }
 
 .header-content {
@@ -56,8 +56,8 @@ body {
 
 .btn-reset {
   background-color: transparent;
-  color: var(--csn-blue);
-  border: 1px solid var(--csn-blue);
+  color: var(--brand-blue);
+  border: 1px solid var(--brand-blue);
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   font-weight: 600;
@@ -68,13 +68,13 @@ body {
 }
 
 .btn-reset:hover {
-  background-color: var(--csn-blue);
+  background-color: var(--brand-blue);
   color: #fff;
 }
 
 .badge {
-  background-color: var(--csn-gold);
-  color: var(--csn-dark-blue);
+  background-color: var(--brand-gold);
+  color: var(--brand-dark-blue);
   font-weight: 800;
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
@@ -85,7 +85,7 @@ body {
   text-align: center;
   margin: 2rem 0 3rem 0;
   padding: 3rem 1.5rem;
-  background-color: var(--csn-dark-blue);
+  background-color: var(--brand-dark-blue);
   border-radius: 12px;
 }
 
@@ -133,18 +133,18 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-/* CIT 151: orange -> white -> light green -> dark green */
-#card-cit151 {
+/* HTML & CSS: orange -> white -> light green -> dark green */
+#card-html-css {
   background: linear-gradient(135deg, #FF8C00 0%, #FFFFFF 40%, #90EE90 70%, #0B6623 100%);
 }
 
-/* CIT 144: orange -> white -> light gray -> black */
-#card-cit144 {
+/* Data Analytics: orange -> white -> light gray -> black */
+#card-data-analytics {
   background: linear-gradient(135deg, #FF8C00 0%, #FFFFFF 40%, #D3D3D3 70%, #111111 100%);
 }
 
-/* CIT 251: blue -> white -> light red -> burgundy */
-#card-cit251 {
+/* Responsive Design: blue -> white -> light red -> burgundy */
+#card-responsive {
   background: linear-gradient(135deg, #1D4ED8 0%, #FFFFFF 40%, #FF7F7F 70%, #6E0F26 100%);
 }
 
@@ -152,20 +152,10 @@ body {
   margin-bottom: 1rem;
 }
 
-.course-code {
-  display: inline-block;
-  background-color: #B8860B;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
 
 .card h2 {
   font-size: 1.35rem;
-  color: var(--csn-blue);
+  color: var(--brand-blue);
 }
 
 .card-desc {
@@ -212,11 +202,11 @@ body {
 }
 
 .auth-box input:focus {
-  border-color: var(--csn-blue);
+  border-color: var(--brand-blue);
 }
 
 .auth-box button {
-  background-color: var(--csn-blue);
+  background-color: var(--brand-blue);
   color: #fff;
   border: none;
   padding: 0.75rem 1.25rem;
@@ -229,7 +219,7 @@ body {
 }
 
 .auth-box button:hover {
-  background-color: var(--csn-dark-blue);
+  background-color: var(--brand-dark-blue);
 }
 
 .resources-box {
@@ -240,7 +230,7 @@ body {
 
 .resources-box h3 {
   font-size: 1rem;
-  color: var(--csn-blue);
+  color: var(--brand-blue);
   margin-bottom: 0.75rem;
 }
 
@@ -323,17 +313,17 @@ body {
 }
 
 .btn-view {
-  background-color: var(--csn-blue);
+  background-color: var(--brand-blue);
   color: #fff;
 }
 
 .btn-view:hover {
-  background-color: var(--csn-dark-blue);
+  background-color: var(--brand-dark-blue);
 }
 
 .btn-download {
-  background-color: var(--csn-gold);
-  color: var(--csn-dark-blue);
+  background-color: var(--brand-gold);
+  color: var(--brand-dark-blue);
 }
 
 .btn-download:hover {
@@ -393,7 +383,7 @@ body {
 
 .modal-footer span {
   font-weight: 600;
-  color: var(--csn-blue);
+  color: var(--brand-blue);
   font-size: 0.9rem;
 }
 
@@ -407,7 +397,7 @@ body {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background-color: var(--csn-blue);
+  background-color: var(--brand-blue);
   color: #fff;
   border: none;
   width: 32px;
@@ -422,7 +412,7 @@ body {
 }
 
 .modal-close:hover {
-  background-color: var(--csn-dark-blue);
+  background-color: var(--brand-dark-blue);
 }
 
 /* ============ Responsive breakpoints ============ */

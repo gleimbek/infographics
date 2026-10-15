@@ -1,7 +1,7 @@
 // Each entry is one infographic image. A chapter/unit can appear more than
 // once here if it has multiple infographics — just add another object with
 // the same "unit" prefix but a different filename/title.
-const cit151Units = [
+const htmlCssUnits = [
   { title: 'Unit A - Getting Started with HTML', filename: 'Unit A - HTML.png' },
   { title: 'Unit B - Structuring Content in a Web Document', filename: 'Unit B - HTML.png' },
   { title: 'Unit C - Getting Started with CSS', filename: 'Unit C - HTML.png' },
@@ -25,7 +25,7 @@ const cit151Units = [
   // { title: 'Unit A - HTML (Part 2)', filename: 'Unit A - HTML Part 2.png' },
 ];
 
-const cit144Units = [
+const dataAnalyticsUnits = [
   { title: 'Chapter 1 - What is Data Analytics?', filename: 'infographic-01.png' },
   { title: 'Chapter 2 - Getting Started with KNIME', filename: 'infographic-02.png' },
   { title: 'Chapter 3 - Transforming Data', filename: 'infographic-03.png' },
@@ -38,7 +38,7 @@ const cit144Units = [
   { title: 'Chapter 9 - Extending Your Toolbox', filename: 'infographic-09.png' },
 ];
 
-const cit251Units = [
+const responsiveUnits = [
   { title: 'Chapter 1 - Introduction to the Internet and Web Design', filename: 'Responsive-01.png' },
   { title: 'Chapter 2 - Building a Webpage Template with HTML 5', filename: 'Responsive-02.png' },
   { title: 'Chapter 3 - Enhancing a Website with Images and Links', filename: 'Responsive-03.png' },
@@ -56,9 +56,9 @@ const cit251Units = [
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderThumbnails('list-cit151', cit151Units);
-  renderThumbnails('list-cit144', cit144Units);
-  renderThumbnails('list-cit251', cit251Units);
+  renderThumbnails('list-html-css', htmlCssUnits);
+  renderThumbnails('list-data-analytics', dataAnalyticsUnits);
+  renderThumbnails('list-responsive', responsiveUnits);
 });
 
 // Generic renderer: works for any course, any number of infographics per chapter.
@@ -186,7 +186,7 @@ function resetView() {
 
   // Re-lock every course: hide resources, show the access code input again,
   // and clear whatever was typed so no unlocked content stays visible.
-  const courseIds = ['cit151', 'cit144', 'cit251'];
+  const courseIds = ['html-css', 'data-analytics', 'responsive'];
   courseIds.forEach(courseId => {
     const box = document.getElementById(`box-${courseId}`);
     const resources = document.getElementById(`resources-${courseId}`);
